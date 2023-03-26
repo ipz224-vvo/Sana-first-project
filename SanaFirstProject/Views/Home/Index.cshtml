@@ -14,7 +14,9 @@
             <p>@Html.TextBox("Name")</p>
             <button type="submit">Output</button>
         </fieldset>
+        }
 
+        @{
         if(@Model.Name != "" && @Model.Name != null)
         {
             <p class="output">Hello, @Model.Name</p>
