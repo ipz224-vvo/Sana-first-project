@@ -1,0 +1,25 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1>First task</h1>
+
+    @{
+        Html.BeginForm("Index", "Home", FormMethod.Post);
+        <fieldset>
+        
+            <p>Enter name:</p>
+            <p>@Html.TextBox("Name")</p>
+            <button type="submit">Output</button>
+        </fieldset>
+
+        if(@Model.Name != "" && @Model.Name != null)
+        {
+            <p class="output">Hello, @Model.Name</p>
+        }
+    }
+    
+   
+</div>
